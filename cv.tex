@@ -52,14 +52,12 @@
 {\footnotesize\hfill{}\color{gray}
 \hfill{}Download this document:
 
-\hfill{}\href[gray]{github.com/blinklad/cv.pdf}{https://github.com/blinklad/latex-templates/cv.pdf \pdf}
+\hfill{}\href[gray]{https://github.com/blinklad/latex-templates/cv.pdf }{github.com/blinklad/cv.pdf \pdf}
 
 \hfill{}(Last updated \thedate.)
 }
 	\end{minipage}
 }
-
-
 
 % Setting the font I want:
 \renewcommand{\familydefault}{\sfdefault}
@@ -96,7 +94,7 @@
 \newcommand{\utas}{University of Tasmania}
 \newcommand{\bict}{Bachelor of Information and Communication Technologies}
 \newcommand{\dus}{Diploma of University Studies}
-\newcommand{\dus}{University Preparation Program}
+\newcommand{\upp}{University Preparation Program}
 
 % Macros for people's names including link to their websites
 \newcommand{\git}{\href{https://github.com/blinklad}{GitHub}}
@@ -139,7 +137,7 @@
 \end{minipage}
 
 \begin{itemize}
-	\item Undergraduate student in \bict~at the \href{https://www.utas.edu.au/}{University of Tasmania \www} \\
+	\item Undergraduate in \bict~at \href{https://www.utas.edu.au/}{University of Tasmania \www} \\
 		2nd year, majoring in Software Development.
 	\item 6.8GPA, aspiration for Honours and post-graduate research streams
 \end{itemize}
@@ -159,21 +157,27 @@
 
 \entry{2017--2017}
 	{\upp}
-	{\utas, Tasmania, Australia}
-	{\\Single semester, articulated into \dus.}
+	{\utas, Tasmania, Australia\\}
+	{Single semester, articulated into \dus.}
 
-\section{Community work}
+
+\section{Community Involvement}
 
 \entry{2019}
 	{University College}
-	{Past student speech}
+	{Student speech}
 	{A short speech on experiences, challenges and successes' I had while enrolled in the \upp.}
+
+	\entry{2018--2019}
+	{Computing and Technology Society}
+	{Member}
+	{Affiliated with the \utas's Computing and Technology Society, including participating in their frequent community events and occasional participation in meetings.}
 
 \section{Information Technologies} 
 
 \subsection{Programming Languages}
 \entry{Imperative}
-	{C, C++, Rust, Python, Go, Java, C#, Haskell, Bash / Bourne shell / Fish, common LISP, Scheme} 
+{C, C++, Rust, Python, Go, Java, C\#, Haskell, Bash / Bourne shell / Fish, common LISP, Scheme} 
 	{}
 	{}
 
@@ -183,7 +187,6 @@
 \entry{Documentation}
 	{{\LaTeX}/{\XeTeX}, R Markdown, HTML}
 	{Strong desire for comprehensive manuals, documentation and structure}
-	{Personal interest in rudimentary linguistics, including computational linguistics and automata theory}
 
 \section{Tools I Use}
 
@@ -191,24 +194,53 @@
 
 I use a \textbf{vim}-based setup in a tiling window manager (\textbf{xmonad}). I compile documents using \textbf{\LaTeX}, and \textbf{biber} for references.
 I've run Microsoft, MacOS and GNU/Linux systems (both Debian and Arch-based varieties).
+I am familiar with Git for source control. I tend to use it by default as a large amount of my workflow appreciates the ability to manage file deltas with granularity\
+- and any workflow would appreciate thoughtful messages attached to each change.
 
 \subsection{Programs I'm Familiar With}
 
-git, tmux, ssh, GIMP, pandoc, GNU Bison
+Git, tmux, ssh, GIMP, StarUML, wireshark, pandoc, GNU Bison\\
+Familiar with Linux systems, with strong transferrable knowledge to POSIX systems, such as the standard network stack, system calls, process management, effective file system management, et cetera.\\
+Very strong belief in automation and genericity, I enjoy writing scripts and utilities to complete laborious tasks for me, such as POSIX bourne shell, Python and even simple interpreters.
 
-%\subsection{Other}
-
-%My build of the the suckless \href{https://github.com/LukeSmithxyz/st}{simple terminal (st) \gh} with added homerow binds and small improvements.
+\section{Employment}
+\entry{2017--2019}
+	{Merchandise Stand Operator}
+	{\href{https://www.lovepoliceatm.com.au/}{Love Police Australian Tour Management \www}\\}
+	{Casual and very sporadic role, involves management of a solo merchandise stand.\\
+		This includes the standard retail affair -- pre- and post-counts of stock, data entry,\\
+		cash handling, customer service and working under pressure.
+	}
+	\entry{2016-2017}
+	{Alchemy Bar and Restaurant}
+	{Kitchen Hand}
+	{Casual, 25 hours p/w, all-rounder kitchen hand role. Safe and hygienic handling and preparation of food, working in a dynamic environment and working as part of a functional team.}
+	{}
 
 \section{Hobbies}
 
-Recreational mathematics, programming language theory, free (i.e. libre) and open source software, including contributing to various projects.
-Miniature painting, especially 1/72 scale high fantasy and science fiction, in which I contribute to online shareboards and have won local painting competitions in.
+\entry{Computing}
+	{Programming language theory, free (i.e.\ libre) and open source software, including contributing to various projects.}
+	{Personal interest in rudimentary linguistics, including computational linguistics, automata theory and (natural | artifical) language processing.}
+	{}
+	{}
+
+\entry{Free Software}
+	{Proponent of software that is free as in libre for a myriad of reasons.}
+	{I contribute to several FOSS projects on Github, including the source of this resume - which you are welcome to fork 
+		\href{https://github.com/blinklad/latex-templates/blob/master/cv.tex} {github.com/blinklad/resume \gh}}
+	{}
+	{}
+
+\entry{Other}
+	{Miniature painting, especially 1/72 scale high fantasy and science fiction, in which I contribute to online shareboards and have won local painting competitions in.}
+	{}
+	{}
 
 \section{References}
 
 \begin{itemize}
-	\item Email me \href{mailto:harveyem@utas.edu.au}{\email}
+	\item Email me \href{mailto:harveyem@utas.edu.au}{harveyem@utas.edu.au \email}
 
 \end{itemize}
 
