@@ -1,0 +1,277 @@
+% xelatex
+\documentclass[letterpaper,
+		%twocolumn,
+		10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{metalogo}
+\usepackage{xifthen}
+\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\newfontfamily\cfont{Noto Sans CJK SC}
+\usepackage{libertine}
+
+% Macro to allow image links in XeLaTeX
+\ifxetex
+  \usepackage{letltxmacro}
+  \setlength{\XeTeXLinkMargin}{1pt}
+  \LetLtxMacro\SavedIncludeGraphics\includegraphics
+  \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+    \IncludeGraphicsAux{#1}%
+  }%
+  \newcommand*{\IncludeGraphicsAux}[2]{%
+    \XeTeXLinkBox{%
+      \SavedIncludeGraphics#1{#2}%
+    }%
+  }%
+\fi
+%%%%%%%
+
+% Bold contents of a link
+\let\oldhref\href
+\renewcommand{\href}[3][blue]{\oldhref{#2}{\color{#1}{#3}}}
+
+% Your name goes here:
+\author{Evan Harvey}
+
+% Update date set to last compile:
+\date{\today}
+
+% Custom title command.
+\renewcommand{\maketitle}{
+	\hspace{.25\textwidth}
+	\begin{minipage}[t]{.5\textwidth}
+\par{\centering{\Huge  \bfseries{\theauthor}}\par}
+	\end{minipage}
+	\begin{minipage}[t]{.25\textwidth}
+{\footnotesize\hfill{}\color{gray}
+\hfill{}Download this document:
+
+\hfill{}\href[gray]{https://github.com/blinklad/latex-templates/cv.pdf }{github.com/blinklad/cv.pdf \pdf}
+
+\hfill{}(Last updated \thedate.)
+}
+	\end{minipage}
+}
+
+% Setting the font I want:
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sqrcaps}
+
+% Making the \entry command
+\newcommand{\entry}[4]{
+\ifthenelse{\isempty{#3}}
+{\slimentry{#1}{#2}}{
+
+\begin{minipage}[t]{.15\linewidth}
+\hfill \textsc{#1}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{.80\linewidth}
+{\bf#2}\\\textit{#3} \footnotesize{#4}
+\end{minipage}\\
+\vspace{.2cm}
+}}
+
+\newcommand{\slimentry}[2]{
+
+\begin{minipage}[t]{.15\linewidth}
+\hfill \textsc{#1}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{.80\linewidth}
+#2
+\end{minipage}\\
+\vspace{.25cm}
+}% end \entry command definition
+
+% Some macros because I'm lazy:
+\newcommand{\utas}{University of Tasmania}
+\newcommand{\bict}{Bachelor of Information and Communication Technologies}
+\newcommand{\dus}{Diploma of University Studies}
+\newcommand{\upp}{University Preparation Program}
+
+% Macros for people's names including link to their websites
+\newcommand{\git}{\href{https://github.com/blinklad}{GitHub}}
+
+\let\lineheight\baselineskip
+
+% Link images
+\newcommand{\pdf}{\includegraphics[height=.85em]{cv/pdf.png}}
+\newcommand{\yt}{\includegraphics[height=.85em]{cv/yt.png}}
+\newcommand{\gh}{\includegraphics[height=.85em]{cv/gh.png}}
+\newcommand{\www}{\includegraphics[height=.85em]{cv/www.png}}
+\newcommand{\email}{\includegraphics[height=.85em]{cv/email.png}}
+\newcommand{\phone}{\includegraphics[height=.85em]{cv/phone.png}}
+
+% Custom section spacing and formatting
+\titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
+\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+\titlespacing{\section}{0pt}{3pt}{7pt}
+\titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
+\titlespacing{\subsection}{0pt}{7pt}{7pt}
+
+% No indentation
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\maketitle
+
+\section{Basic Info}
+
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rp{.75\linewidth}}
+	\baselineskip=20pt
+	\email{} :     & \href{mailto:harveyem@utas.edu.au}{harveyem@utas.edu.au}\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rl}
+	\gh{} : & \href{http://github.com/blinklad}{github.com/blinklad}\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rl}
+	\phone{} : & 0448454504\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rl}
+	\email{} : & \href{mailto:harveyem@utas.edu.au}{harveyem@utas.edu.au \email}\\
+\end{tabular}
+\end{minipage}
+
+\begin{itemize}
+	\item Undergraduate in \bict~at \href{https://www.utas.edu.au/}{University of Tasmania \www} \\
+		2nd year, majoring in Software Development.
+	\item 6.8GPA, aspiration for Honours and post-graduate research streams
+\end{itemize}
+
+\section{Institutions}
+
+\entry{2018--present}
+	{\bict}
+	{\utas, Tasmania, Australia}
+	{Software Development major}
+
+\entry{2017--2017}
+	{\dus}
+	{\utas, Tasmania, Australia}
+	{University course to meet mature age or early school leaver requirements.\\
+		Finished after one semester to fast-track into degree on account of high grades.}
+
+\entry{2017--2017}
+	{\upp}
+	{\utas, Tasmania, Australia\\}
+	{Single semester, articulated into \dus.}
+
+
+\section{Community Involvement}
+
+\entry{2019}
+	{University College}
+	{Student speech}
+	{Delivered presentation on experiences, challenges and success as a \dus student.}
+
+	\entry{2018--2019}
+	{Computing and Technology Society}
+	{Member}
+	{Affiliated with the \utas's Computing and Technology Society, including participating in their frequent community events and occasional participation in meetings.}
+
+	\entry{2012-2013}
+	{Launceston Tramway Museum}
+	{Tram Conductor \& Tour Guide}
+	{Volunteering. Demonstrated effective customer service to diverse range of tourists.. Managed health and safety requirements of running vehicle along Inveresk rail-lines. Conducted a unique tourism opportunity. }
+
+\section{Recent Employment}
+\entry{2017--2019}
+	{Merchandise Stand Manager}
+	{\href{https://www.lovepoliceatm.com.au/}{Love Police Australian Tour Management \www}\\}
+	{Organising large volumes of stock to be collected, counted, sold under pressure and time constraints.\\
+		Enabled effective communications and quality service among highly diverse customers.
+		Managed standard retail affair -- pre- and post-counts of stock, data entry,\\
+		cash handling, customer service and working under pressure. \\
+		Taken part in working with high-profile artists and unique venue arrangements.\\
+		Seasonal, casual work.
+	}
+	\entry{2016-2017}
+	{Kitchen Hand}
+	{Alchemy Bar and Restaurant}
+	{Engaged with back- and front-of-house teams to implement a successful food and beverage service. \\
+		Applied hygienic and effective preparation, storage of food.\\
+		Trained in plating and rudimentary dish preparation.\\
+		Obtained discipline to work in a high-pressure environment on busy nights, eg. functions, seasonal events.\\
+	Casual, 25 hours p/w}
+	{}
+
+	% \entry{2012-2014}
+	% {Fresh Cafe}
+	% {All-rounder}
+	% {}
+
+\section{Information Technologies} 
+
+\subsection{Programming Languages}
+\entry{Imperative}
+{C, C++, Rust, Python, Go, Java, C\#, Haskell, Bash / Bourne shell / Fish, common LISP, Scheme} 
+	{}
+	{}
+
+%TODO
+%\entry{Declarative}
+
+\entry{Documentation}
+	{{\LaTeX}/{\XeTeX}, R Markdown, HTML}
+	{Strong desire for comprehensive manuals, documentation and structure}
+
+\section{Tools I Use}
+
+\subsection{Usual Workflow}
+
+I use a \textbf{vim}-based setup in a tiling window manager (\textbf{xmonad}). I compile documents using \textbf{\LaTeX}, and \textbf{biber} for references.
+I've run Microsoft, MacOS and GNU/Linux systems (both Debian and Arch-based varieties).
+I am familiar with Git for source control. I tend to use it by default as a large amount of my workflow appreciates the ability to manage file deltas with granularity\
+- and any workflow would appreciate thoughtful messages attached to each change.
+
+\subsection{Programs I'm Familiar With}
+
+Git, tmux, ssh, GIMP, Microsoft Excel, StarUML, wireshark, pandoc \\
+Familiar with Linux systems, with strong transferrable knowledge to POSIX systems, such as the standard network stack, system calls, process management, effective file system management, et cetera.\\
+Very strong belief in automation and genericity, I enjoy writing scripts and utilities to complete laborious tasks for me, such as POSIX bourne shell, Python and even simple interpreters.
+
+\section{Hobbies}
+
+\entry{Computing}
+	{Programming language theory, free (i.e.\ libre) and open source software, including contributing to various projects.}
+	{Personal interest in rudimentary linguistics, including computational linguistics, automata theory and (natural | artifical) language processing.}
+	{}
+	{}
+
+	\entry{Open Source}
+	{Proponent of software that is free as in libre for a myriad of reasons.}
+	{Contributes to several software projects on Github, including the source of this resume.}
+	{Merit-based, intriniscally motivated community enables developing personal competency and improve communications with diverse individuals, by contributing to real software}
+
+\entry{Other}
+{Miniature painting, especially 1/72 scale high fantasy and science fiction, in which I contribute to online communities and have won local painting competitions in.}
+	{}
+	{}
+
+	\section{Scholarships, Awards and Achievments}
+\entry{2019}
+{Scholarship -- Queensland Tertiary Admissions Centre}
+{Offered scholarship as part of Rural and Regional Enterprise Scholarship Program.}
+{}
+
+\entry{2019}
+{Invited to join Golden Key Honours Society}
+{As part of the international Golden Key society's entry requirements of top 15\% GPA, received information for membership at the University of Tasmania chapter.}
+{}
+
+\end{document}
