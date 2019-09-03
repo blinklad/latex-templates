@@ -1,3 +1,3 @@
 # LaTeX templates
+Various LaTeX templates I use.
 
-Fork of Luke's latex templates, but stripped down for non-linguist brainlets.
