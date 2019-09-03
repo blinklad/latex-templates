@@ -765,11 +765,11 @@
 % Define a closing of the cover letter
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{
-  \vspace{3.4mm}
+  \vspace{1.4mm}
   \lettertextstyle{\@letterclosing} \\\\
-  \includegraphics[width=3cm, height=1.5cm]{signature}
-  \break
-  \break
+  %\includegraphics[width=3cm, height=1.5cm]{signature}
+  % \break
+  % \break
   \letternamestyle{\@firstname \hspace{1pt} \@lastname}
   \ifthenelse{\isundefined{\@letterenclosure}}
     {\\}
