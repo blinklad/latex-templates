@@ -102,12 +102,12 @@
 \let\lineheight\baselineskip
 
 % Link images
-\newcommand{\pdf}{\includegraphics[height=.85em]{images/cv/pdf.png}}
-\newcommand{\yt}{\includegraphics[height=.85em]{images/cv/yt.png}}
-\newcommand{\gh}{\includegraphics[height=.85em]{images/cv/gh.png}}
-\newcommand{\www}{\includegraphics[height=.85em]{images/cv/www.png}}
-\newcommand{\email}{\includegraphics[height=.85em]{images/cv/email.png}}
-\newcommand{\phone}{\includegraphics[height=.85em]{images/cv/phone.png}}
+\newcommand{\pdf}{\includegraphics[height=.85em]{applications/images/cv/pdf.png}}
+\newcommand{\yt}{\includegraphics[height=.85em]{applications/images/cv/yt.png}}
+\newcommand{\gh}{\includegraphics[height=.85em]{applications/images/cv/gh.png}}
+\newcommand{\www}{\includegraphics[height=.85em]{applications/images/cv/www.png}}
+\newcommand{\email}{\includegraphics[height=.85em]{applications/images/cv/email.png}}
+\newcommand{\phone}{\includegraphics[height=.85em]{applications/images/cv/phone.png}}
 
 % Custom section spacing and formatting
 \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
@@ -141,11 +141,6 @@
 	\phone{} : & 0448454504\\
 \end{tabular}
 \end{minipage}
-\begin{minipage}[t]{.5\linewidth}
-\begin{tabular}{rl}
-	\email{} : & \href{mailto:harveyem@utas.edu.au}{harveyem@utas.edu.au \email}\\
-\end{tabular}
-\end{minipage}
 
 \begin{itemize}
 	\item Undergraduate in \bict~at \href{https://www.utas.edu.au/}{University of Tasmania \www} \\
@@ -164,7 +159,7 @@
 	{\dus}
 	{\utas, Tasmania, Australia}
 	{University course to meet mature age or early school leaver requirements.\\
-		Finished after one semester to fast-track into degree on account of high grades.}
+		Completed one semester early, fast-tracked into degree due to high grades.}
 
 \entry{2017--2017}
 	{\upp}
@@ -176,8 +171,9 @@
 
 \entry{2019}
 	{University College}
-	{Student speech}
-	{Delivered presentation on experiences, challenges and success as a \dus student.}
+	{Orientation speech}
+	{Delivered presentation on experiences, challenges and prior success as a \dus~student.\\
+		Engaged with groups of students and suggested methodologies to manage study-life balance.}
 
 	\entry{2018--2019}
 	{Computing and Technology Society}
@@ -187,10 +183,21 @@
 	\entry{2012-2013}
 	{Launceston Tramway Museum}
 	{Tram Conductor \& Tour Guide}
-	{Volunteering. Demonstrated effective customer service to diverse range of tourists.. Managed health and safety requirements of running vehicle along Inveresk rail-lines. Conducted a unique tourism opportunity. }
+	{Volunteering. Demonstrated effective customer service to diverse range of tourists. Managed health and safety requirements of running vehicle along Inveresk rail-lines. Conducted a unique tourism opportunity. }
 
-\section{Recent Employment}
-\entry{2017--present}
+\section{Scholarships, Awards and Achievements}
+\entry{2019}
+{Queensland Tertiary Admissions Centre}
+{Scholarship}
+{Offered scholarship as part of Rural and Regional Enterprise Scholarship Program.}
+
+\entry{2019}
+{Golden Key Honours Society}
+{Invitation}
+{As part of the international Golden Key society's entry requirements of top 15\% institutional GPA, received invitation for membership at the University of Tasmania chapter.}
+
+\section{Past Employment}
+\entry{2017--2019}
 	{Merchandise Stand Manager}
 	{\href{https://www.lovepoliceatm.com.au/}{Love Police Australian Tour Management \www}\\}
 	{Organising large volumes of stock to be collected, counted, sold under pressure and time constraints.\\
@@ -209,15 +216,10 @@
 	Casual, 25 hours p/w}
 	{}
 
-	% \entry{2012-2014}
-	% {Fresh Cafe}
-	% {All-rounder}
-	% {}
-
 \section{Information Technologies} 
 
 \subsection{Programming Languages}
-\entry{General Purpose}
+\entry{General}
 {C, C++, Rust, Python, Go, Java, C\#, Haskell, Shell scripting, Scheme} 
 	{}
 	{}
@@ -230,42 +232,33 @@
 
 \subsection{Usual Workflow}
 
-I use a \textbf{vim}-based setup in a tiling window manager (\textbf{xmonad}). I compile documents using \textbf{\LaTeX}, and \textbf{biber} for references.
+I compile documents using \textbf{\LaTeX}, and \textbf{biber} for organising my bibliography. I write simple notes using Markdown and MathML. 
+I am familiar with Git for source control, which I manage a large amount of my University and online footprint with.
 I've run Microsoft, MacOS and GNU/Linux systems (both Debian and Arch-based varieties).
-I am familiar with Git for source control. I tend to use it by default as a large amount of my workflow appreciates the ability to manage file deltas with granularity.
+Familiar with Intellij, Clion and Visual Studio Code.
 
 \subsection{Programs I'm Familiar With}
 
-Git, tmux, ssh, GIMP, Microsoft Excel, Microsoft Word, StarUML, wireshark, pandoc \\
+Git, tmux, ssh, GIMP, Microsoft Excel, Microsoft Word, StarUML, wireshark, pandoc. \\
 Familiar with Linux systems, with strong transferrable knowledge to POSIX systems, such as the standard network stack, system calls, process management, effective file system management, et cetera.\\
 Very strong belief in automation and genericity, I enjoy writing scripts and utilities to complete laborious tasks for me, such as POSIX bourne shell, Python and even simple interpreters / domain-specific languages.
 
 \section{Hobbies}
 
 \entry{Computing}
-{System utilities, including window managers, email clients, text editors, but also automation and scripting tools.}
-{Personal interest in rudimentary linguistics, including computational linguistics, automata theory and natural language processing.}
+{System utilities}
+	{Window managers, email clients, text editors, but also automation and scripting tools.}
+	{}
 	{}
 
 	\entry{Open Source}
 	{Proponent of free and open source software development and usage.}
-	{Contributes to several software projects on Github, including this resume.}
-	{Merit-based, intriniscally motivated community enables developing personal competency and improve communications with diverse individuals, by contributing to real software}
-
-\entry{Other}
-{Miniature painting, especially 1/72 scale high fantasy and science fiction, in which I contribute to online communities and have won local painting competitions in.}
-	{}
+	{Contributes to several open source projects on Github, including this resume.\\}
+	{The open source software community allows me to continue developing technical competency, while improving group work and communication skills among diverse individuals. }
 	{}
 
-	\section{Scholarships, Awards and Achievments}
-\entry{2019}
-{Scholarship -- Queensland Tertiary Admissions Centre}
-{Offered scholarship as part of Rural and Regional Enterprise Scholarship Program.}
-{}
-
-\entry{2019}
-{Invited to join Golden Key Honours Society}
-{As part of the international Golden Key society's entry requirements of top 15\% GPA, received invitation for membership at the University of Tasmania chapter.}
-{}
-
+\entry{Painting}
+{Miniatures} 
+{1/72 scale, high fantasy and science fiction, in which I contribute to online communities and have won local painting competitions in.}
+	{}
 \end{document}
