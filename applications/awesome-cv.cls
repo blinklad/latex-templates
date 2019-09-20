@@ -767,7 +767,7 @@
 \newcommand*{\makeletterclosing}{
   \vspace{3.4mm}
   \lettertextstyle{\@letterclosing} \\\\
-  \includegraphics[width=3cm, height=1.5cm]{signature}
+  %\includegraphics[width=3cm, height=1.5cm]{signature}
   \break
   \break
   \letternamestyle{\@firstname \hspace{1pt} \@lastname}

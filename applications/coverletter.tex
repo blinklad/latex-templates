@@ -31,11 +31,11 @@
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 %% Color for highlight
 % Define your custom color if you don't like awesome colors
-\colorlet{awesome}{awesome-red}
-%\definecolor{awesome}{HTML}{CA63A8}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
+\colorlet{awesome}{awesome-skyblue}
+\definecolor{awesome}{HTML}{CA63A8}
+\definecolor{text}{HTML}{414141}
+\definecolor{graytext}{HTML}{414141}
+\definecolor{lighttext}{HTML}{414141}
 
 %%% Override a separator for social informations in header(default: ' | ')
 %\headersocialsep[\quad\textbar\quad]
@@ -46,6 +46,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Needed to divide into several files
 \usepackage{import}
+\usepackage{hyperref}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,21 +54,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Essentials
 \name{Evan}{Harvey}
-\address{58 Amy Road Newstead}
 \mobile{(614) 48454504}
 %%% Social
 \email{harveyem@utas.edu.au}
 \github{blinklad}
 
 \letterdate{\today}
-\recipientfirstname{Hiring}
-\recipientlastname{Manager}
+\recipientfirstname{Dr. Son}
+\recipientlastname{Tran}
 \recipientaddress{University of Tasmania\\
-			Newnham Campus\#1 \\
-			Tasmania \#2}
+			College of Sciences and Engineering\\
+			Newnham Campus\\
+			Tasmania}
 % \lettertitle{}
-\letteropening{Dear Hiring }
-\letterclosing{Yours sincerely,}
+\letteropening{Dear Dr. }
+\letterclosing{I look forward to hearing from you.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Content
@@ -91,7 +92,5 @@
 % \import{\sectiondir}{education.tex}
 % \import{\sectiondir}{honors.tex}
 \import{\sectiondir}{cover.tex}
-
 \makeletterclosing
-
 \end{document}
