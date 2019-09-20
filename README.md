@@ -1,3 +1,3 @@
 # LaTeX templates
-Various LaTeX templates I use.
 
+### Branch used for Dean's Summer Scholarship 2019 application
